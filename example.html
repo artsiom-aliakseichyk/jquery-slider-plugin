@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>sadasd</title>
+	<style type="text/css">
+.slider:after {
+	content: " ";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.slider li {
+	float: left;
+	display: block;
+	width: 200px;
+}
+
+.first {
+	background: #6b3fae;
+}
+
+.second {
+	background: #8dae3f;
+}
+
+.third {
+	background: #3f8dae;
+}
+
+.fourth {
+	background: #ae3fa0;
+}
+
+.fifth {
+	background: #5c4541;
+}
+
+.sixth {
+	background: #44415c;
+}
+
+.seventh {
+	background: #00ef7c;
+}
+
+.eights {
+	background: #efd200;
+}
+	</style>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="js/slider-plugin-0.1.js"></script>
+
+</head>
+<body>
+	<ul class="slider">
+		<li class="first">
+			<p>slide1</p>
+		</li>
+		<li class="second">
+			<p>slide2</p>
+		</li>
+		<li class="third">
+			<p>slide3</p>
+		</li>
+		<li class="fourth">
+			<p>slide4</p>
+		</li>
+		<li class="fifth">
+			<p>slide5</p>
+		</li>
+		<li class="sixth">
+			<p>slide6</p>
+		</li>
+		<li class="seventh">
+			<p>slide7</p>
+		</li>
+		<li class="eights">
+			<p>slide8</p>
+		</li>
+	</ul>
+
+<a class="prev" href="#">Prev</a>
+<a class="next" href="#">Next</a>
+<script type="text/javascript">
+	$(document).ready(function() {
+	$("a").on("click", function(event) {
+		event.preventDefault();
+	})
+	var slider = $(".slider");
+	$('.prev').on("click", function() {
+		slider.ulSlider({direction: "left", speed: "fast" });
+	});
+	$(".next").on("click", function() {
+		slider.ulSlider({direction: "right", speed: "fast" });
+	});
+});
+</script>
+</body>
+</html>
